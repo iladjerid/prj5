@@ -18,9 +18,6 @@ public class GUIDisplay {
     private Button nextButton;
     private Button previousButton;
 
-
-    // private Glyph[] glyphArray;
-
     /**
      * Sets up window for Project 5
      */
