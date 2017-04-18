@@ -3,6 +3,7 @@ package prj5;
 import CS2114.Button;
 import CS2114.Window;
 import CS2114.WindowSide;
+import CS2114.Shape;
 
 public class GUIDisplay {
 
@@ -17,6 +18,7 @@ public class GUIDisplay {
     private Button majorButton;
     private Button nextButton;
     private Button previousButton;
+    private Shape legendBox;
 
     /**
      * Sets up window for Project 5
