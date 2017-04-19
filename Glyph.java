@@ -40,4 +40,11 @@ public class Glyph
         musicBarHeard = new Shape(1, 4, 1, 1, Color.YELLOW);
         musicBarLike = new Shape(3, 4, 1, 1, Color.YELLOW);
     }
+    
+     public void setSong(Song song) {
+        this.song.setName(song.getName());
+        this.song.setArtist(song.getArtist());
+        this.song.setGenre(song.getGenre());
+        this.song.setYear(song.getYear());
+    }
 }
