@@ -5,6 +5,8 @@ import list.ListInterface;
 /**
  * @author Kayley Bogemann (kayley25)
  * @version 2017.04.17
+ * class used to set up the data structure for LList
+ * to be used to sort through out our program
  *
  */
 public class LList<T> implements ListInterface<T> {
