@@ -3,9 +3,16 @@
  */
 package prj5;
 
-
+    /**
+    * class used to read the input from the csv files and scan through it while
+    * interpreting the text and counting each score
+    */
     public class Input {
 
+    /**
+    * the main method that executes the process of analyzing the 
+    * file being input into the program
+    */
     public static void main(String[] args) {
         ListScanner scanner = new ListScanner(args[0], args[1]);
         SortedPeopleList people = scanner.people;
