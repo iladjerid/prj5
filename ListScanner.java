@@ -8,26 +8,130 @@ package prj5;
  *
  */
 public class ListScanner {
+    public int[] heardSport;
+    public int[] heardMusic;
+    public int[] heardRead;
+    public int[] heardArt;
+    public int[] likeSport;
+    public int[] likeMusic;
+    public int[] likeRead;
+    public int[] likeArt;
+    public SortedPeopleList people;
+    public SortedSongList songs;
+
 
     public ListScanner(String fileNameSurvey, String fileNameSong) {
-
+        people = readListFileSurvey(fileNameSurvey);
+        songs = readListFileSong(fileNameSong);
+        heardSport = new int[people.getSportHobby().getLength()];
+        likeSport = new int[people.getSportHobby().getLength()];
+        heardMusic = new int[people.getMusicHobby().getLength()];
+        likeMusic = new int[people.getMusicHobby().getLength()];
+        heardRead = new int[people.getReadHobby().getLength()];
+        likeRead = new int[people.getReadHobby().getLength()];
+        heardArt = new int[people.getArtHobby().getLength()];
+        likeArt = new int[people.getArtHobby().getLength()];
+        songListData(fileNameSurvey, people);
         GUIDisplay disp = new GUIDisplay();
     }
 
 
-    public SortedPersonList readListFileSurvey(String fileName) {
-        SortedPersonList list = new SortedPersonList();
+    public SortedPeopleList readListFileSurvey(String fileName) {
+        SortedPersonList persons = new SortedPersonList();
         File f = new File(fileName);
         try {
             Scanner file = new Scanner(f);
-            while(file.hasNextLine()) {
+            while (file.hasNextLine()) {
                 String data[] = file.nextLine().split("*,*");
+                Person person = new Person();
+                int id = Integer.parseInt(data[0]);
+                int year = Integer.parseInt(data[1]);
+                person.setId(id);
+                person.setDate(year);
+                person.setMajor(data[2]);
+                person.setRegion(data[3]);
+                person.setHobby(data[4]);
+                persons.add(person, "hobby");
+                persons.add(person, "region");
+                persons.add(person, "major");
             }
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        SortedPeopleList list = new SortedPeopleList(persons);
         return list;
+    }
+
+
+    public void songListData(String fileName, SortedPeopleList people) {
+        File f = new File(fileName);
+        try {
+            Scanner file = new Scanner(f);
+            while (file.hasNextLine()) {
+                String[] string = file.nextLine().split("*,*");
+                String[] ans = new String[string.length - 5];
+                for (int i = 0; i < ans.length; i++) {
+                    ans[i] = string[i + 5];
+                }
+                int hCount = 0;
+                int lCount = 0;
+                for (int i = 0; i < ans.length; i++) {
+                    if (i % 2 != 1) {
+                        if (ans[i].equals("Yes") && string[4].equals(
+                            "Sports")) {
+                            heardSport[hCount]++;
+                        }
+                        else {
+                            if (ans[i].equals("Yes") && string[4].equals(
+                                "Music")) {
+                                heardMusic[hCount]++;
+                            }
+                            else {
+                                if (ans[i].equals("Yes") && string[4].equals(
+                                    "Reading")) {
+                                    heardRead[hCount]++;
+                                }
+                                else {
+                                    if (ans[i].equals("Yes") && string[4]
+                                        .equals("Art")) {
+                                        heardArt[hCount]++;
+                                    }
+                                }
+                            }
+                        }
+                        hCount++;
+                    }
+                    else {
+                        if (ans[i].equals("Yes") && string[4].equals("Music")) {
+                            likeMusic[lCount]++;
+                        }
+                        else {
+                            if (ans[i].equals("Yes") && string[4].equals(
+                                "Sports")) {
+                                likeSport[lCount]++;
+                            }
+                            else {
+                                if (ans[i].equals("Yes") && string[4].equals(
+                                    "Reading")) {
+                                    likeRead[lCount]++;
+                                }
+                                else {
+                                    if (ans[i].equals("Yes") && string[4]
+                                        .equals("Art")) {
+                                        likeArt[lCount]++;
+                                    }
+                                }
+                            }
+                        }
+                        lCount++;
+                    }
+                }
+            }
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 
