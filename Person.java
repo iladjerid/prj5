@@ -2,6 +2,9 @@ package prj5;
 
 public class Person {
 
+    /**
+    * fields used to declare different objects in the class
+    */
     private int id;
     private int date;
     private String major;
