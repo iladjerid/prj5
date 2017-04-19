@@ -5,7 +5,7 @@ package prj5;
      * @author Kayley Bogemann (kayley25)
      * @version 2017.04.17
      */
-   public class Song {
+    public class Song {
     private String name;
     private String artist;
     private String genre;
@@ -13,7 +13,7 @@ package prj5;
 
 
     /**
-     * default constructor
+     * default constructor which sets all the fields to their base values
      */
     public Song() {
         name = "";
@@ -24,7 +24,8 @@ package prj5;
 
 
     /**
-     * Constructor
+     * Constructor used to set the fields to a specific song and its parameters
+     * by manually inputing the fields that its associated with
      * 
      * @param name
      *            Name of song
@@ -91,7 +92,9 @@ package prj5;
         return genre;
     }
 
-
+    /**
+    * changes the genre field for the song specified
+    */
     public void setGenre(String genre) {
         this.genre = genre;
     }
@@ -106,7 +109,9 @@ package prj5;
         return year;
     }
 
-
+    /**
+    * changes the year field for the song specified
+    */
     public void setYear(int year) {
         this.year = year;
     }
@@ -121,7 +126,9 @@ package prj5;
         return artist;
     }
 
-
+    /**
+    * changes the artist field for the song specified
+    */
     public void setArtist(String artist) {
         this.artist = artist;
     }
@@ -136,7 +143,9 @@ package prj5;
         return name;
     }
 
-
+    /**
+    * changes the name field for the song specified
+    */
     public void setName(String name) {
         this.name = name;
     }
