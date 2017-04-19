@@ -4,6 +4,7 @@ package prj5;
 import student.TestCase;
 
 /**
+ * Test class for the LList class
  * @author Kayley Bogemann (kayley25)
  * @version 2017.04.18
  *
