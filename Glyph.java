@@ -6,7 +6,7 @@ import CS2114.TextShape;
 
 /**
  * @author Jonathan
- *
+ *  class used to set up each indiviudal glyph that will be called onto the main display
  */
 public class Glyph 
 {   
@@ -41,6 +41,9 @@ public class Glyph
         musicBarLike = new Shape(3, 4, 1, 1, Color.YELLOW);
     }
     
+     /**
+     * method used to set which song will be displayed on the specific glyph
+     */
      public void setSong(Song song) {
         this.song.setName(song.getName());
         this.song.setArtist(song.getArtist());
