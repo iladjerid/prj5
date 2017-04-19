@@ -43,6 +43,42 @@ package prj5;
         }
 
 
+     /**
+     * compares two song objects for equality based on a certain attribute
+     * 
+     * @param aSong
+     *            song to be compared to this
+     * @param command
+     *            attribute to be used for comparison
+     * @return 0 if equal, 1 if anEntry > this, -1 if anEntry < this
+     */
+    public int compareTo(Song aSong, String command) {
+        if (command.equals("name")) {
+            return this.getName().compareTo(aSong.getName());
+        }
+        else {
+            if (command.equals("artist")) {
+                return this.getArtist().compareTo(aSong.getArtist());
+            }
+            else {
+                if (command.equals("genre")) {
+                    return this.getGenre().compareTo(aSong.getGenre());
+                }
+                else {
+                    if (this.getYear() < aSong.getYear()) {
+                        return 1;
+                    }
+                    else {
+                        if (this.getYear() > aSong.getYear()) {
+                            return -1;
+                        }
+                        else {
+                            return 0;
+                        }
+                    }
+                }
+            }
+      
         /**
          * gets genre of song
          * 
