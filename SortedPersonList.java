@@ -38,4 +38,18 @@ public class SortedPersonList {
     public LList<Person> getRegionList() {
         return regionList;
     }
+    
+    public int getHobbySize() {
+        return hobbyList.getLength();
+    }
+
+
+    public int getMajorSize() {
+        return majorList.getLength();
+    }
+
+
+    public int getRegionSize() {
+        return regionList.getLength();
+    }
 }
