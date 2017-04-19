@@ -43,6 +43,8 @@ public class Glyph
     
      /**
      * method used to set which song will be displayed on the specific glyph
+     *
+     *@param song object desired to set in the glyph
      */
      public void setSong(Song song) {
         this.song.setName(song.getName());
