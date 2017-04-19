@@ -24,4 +24,18 @@ public class SortedPersonList {
             }
         }
     }
+    
+    public LList<Person> getHobbyList() {
+        return hobbyList;
+    }
+
+
+    public LList<Person> getMajorList() {
+        return majorList;
+    }
+
+
+    public LList<Person> getRegionList() {
+        return regionList;
+    }
 }
