@@ -20,7 +20,7 @@ public class Glyph
     private Shape sportsBarLike;
     private Shape musicBarHeard;
     private Shape musicBarLike;
-    private Counter data;
+    private Song song;
     
     
     /**
@@ -28,7 +28,7 @@ public class Glyph
      */
     public Glyph()
     {
-        data = new Counter();
+        song = new Song();
         title = new TextShape(0, 0, "");
         midBar = new Shape(2, 1, 1, 4, Color.BLACK);
         readBarHeard = new Shape(1, 1, 1, 1, Color.PINK);
