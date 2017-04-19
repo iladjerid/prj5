@@ -30,5 +30,7 @@ public class SortedSongList {
         return songList;
     }
 
-
+    public int getSize() {
+        return songList.getLength();
+    }
 }
