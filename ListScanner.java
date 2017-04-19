@@ -6,7 +6,7 @@ package prj5;
 /**
  * class used to go through the list created to keep track of points
  * for each category and genre as well as the survey responses.
- * @author iladj
+ * @author ilyes adjerid
  * 
  */
 public class ListScanner {
@@ -24,6 +24,8 @@ public class ListScanner {
     /**
     * Constructor used to recievce the survey entry and their song choice scores
     * for a specific song name
+    * @param fileNameSurvey to indicate the survey selected
+    * @param fileNameSong to indicate which song is to be scanned
     */
     public ListScanner(String fileNameSurvey, String fileNameSong) {
         people = readListFileSurvey(fileNameSurvey);
@@ -41,8 +43,10 @@ public class ListScanner {
     }
 
     /**
-    *  Method that goes through the list containing each persons name and their 
+    * Method that goes through the list containing each persons name and their 
     * stored data as well
+    * @param fileName used to input the name to search for 
+    * @return SortedPeopleList a sorted list of people from the filename
     */
     public SortedPeopleList readListFileSurvey(String fileName) {
         SortedPersonList persons = new SortedPersonList();
@@ -74,6 +78,8 @@ public class ListScanner {
     /**
     * method used to retrieve the specific data for the person and
     * analyze their choices according to the specific song
+    * @param fileName to search for a song input
+    * @param people to find a sorted person from survey
     */
     public void songListData(String fileName, SortedPeopleList people) {
         File f = new File(fileName);
@@ -149,6 +155,8 @@ public class ListScanner {
     /**
     * method that retrieves the song object and its data 
     * the input song name
+    * @param fileName name of the file to be read
+    * @return SortedSongList returns the sorted song list from the file indicated
     */
     public SortedSongList readListFileSong(String fileName) {
         SortedSongList list = new SortedSongList();
