@@ -12,6 +12,8 @@ package prj5;
     /**
     * the main method that executes the process of analyzing the 
     * file being input into the program
+    *
+    *@param args String file being input to be scanned and interpreted by program
     */
     public static void main(String[] args) {
         ListScanner scanner = new ListScanner(args[0], args[1]);
