@@ -89,7 +89,7 @@ public class GUIDisplay {
     /**
      * Quit button will exit the window.
      * 
-     * @param button
+     * @param button clicked to indicate desire to quit
      */
     public void clickedQuit(Button button) {
         System.exit(0);
@@ -99,7 +99,7 @@ public class GUIDisplay {
     /**
      * Previous button will set up previous nine glyphs in right order.
      * 
-     * @param button
+     * @param button clicked to go back
      */
     public void clickedPrevious(Button button) {
 
@@ -109,7 +109,7 @@ public class GUIDisplay {
     /**
      * Will arrange the glyphs by the name of the song artist.
      * 
-     * @param button
+     * @param button clicked to select sort by artist
      */
     public void clickedArtist(Button button) {
 
@@ -119,7 +119,7 @@ public class GUIDisplay {
     /**
      * Will arrange the glyphs by song title.
      * 
-     * @param button
+     * @param button clicked to choose title sorting
      */
     public void clickedTitle(Button button) {
 
@@ -129,7 +129,7 @@ public class GUIDisplay {
     /**
      * Will arrange the glyphs in order by year of release.
      * 
-     * @param button
+     * @param button clicked to choose year sorting
      */
     public void clickedYear(Button button) {
 
@@ -139,7 +139,7 @@ public class GUIDisplay {
     /**
      * Will arrange the glyphs by song genre.
      * 
-     * @param button
+     * @param button clicked to choose genre sorting
      */
     public void clickedGenre(Button button) {
 
@@ -149,7 +149,7 @@ public class GUIDisplay {
     /**
      * Will set up next nine glyphs in right order.
      * 
-     * @param button
+     * @param button clicked to choose next
      */
     public void clickedNext(Button button) {
 
@@ -159,7 +159,7 @@ public class GUIDisplay {
     /**
      * Will represent the student survey response by hobby.
      * 
-     * @param button
+     * @param button clicked to sort by hobby
      */
     public void clickedHobby(Button button) {
 
@@ -169,7 +169,7 @@ public class GUIDisplay {
     /**
      * Will represent the student survey responses by major
      * 
-     * @param button
+     * @param button clicked to choose sorting by maor
      */
     public void clickedMajor(Button button) {
 
@@ -179,7 +179,7 @@ public class GUIDisplay {
     /**
      * Will represent the student survey responses by region
      * 
-     * @param button
+     * @param button clicked to sort bt religion
      */
     public void clickedRegion(Button button) {
 
