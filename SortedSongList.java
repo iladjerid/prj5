@@ -25,5 +25,10 @@ public class SortedSongList {
             }
         }
     }
+    
+    public LList<Song> getSongList() {
+        return songList;
+    }
+
 
 }
