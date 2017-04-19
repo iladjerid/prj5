@@ -5,8 +5,17 @@ import CS2114.Window;
 import CS2114.WindowSide;
 import CS2114.Shape;
 
+
+/**
+* class used to create a display for the user to see and interact with.
+* methods within the class are used to interpret user control and actions
+* and how the display changes under cerain effects
+*/
 public class GUIDisplay {
 
+    /**
+    * fields that need to be instantiated to be used throughout the code
+    */
     private Window window;
     private Button quitButton;
     private Button sortTitle;
