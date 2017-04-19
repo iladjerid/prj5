@@ -4,8 +4,10 @@
 package prj5;
 
 /**
+ * class used to go through the list created to keep track of points
+ * for each category and genre as well as the survey responses.
  * @author iladj
- *
+ * 
  */
 public class ListScanner {
     public int[] heardSport;
@@ -19,7 +21,10 @@ public class ListScanner {
     public SortedPeopleList people;
     public SortedSongList songs;
 
-
+    /**
+    * Constructor used to recievce the survey entry and their song choice scores
+    * for a specific song name
+    */
     public ListScanner(String fileNameSurvey, String fileNameSong) {
         people = readListFileSurvey(fileNameSurvey);
         songs = readListFileSong(fileNameSong);
@@ -35,7 +40,10 @@ public class ListScanner {
         GUIDisplay disp = new GUIDisplay();
     }
 
-
+    /**
+    *  Method that goes through the list containing each persons name and their 
+    * stored data as well
+    */
     public SortedPeopleList readListFileSurvey(String fileName) {
         SortedPersonList persons = new SortedPersonList();
         File f = new File(fileName);
@@ -63,7 +71,10 @@ public class ListScanner {
         return list;
     }
 
-
+    /**
+    * method used to retrieve the specific data for the person and
+    * analyze their choices according to the specific song
+    */
     public void songListData(String fileName, SortedPeopleList people) {
         File f = new File(fileName);
         try {
@@ -135,6 +146,10 @@ public class ListScanner {
     }
 
 
+    /**
+    * method that retrieves the song object and its data 
+    * the input song name
+    */
     public SortedSongList readListFileSong(String fileName) {
         SortedSongList list = new SortedSongList();
         File f = new File(fileName);
