@@ -19,6 +19,7 @@ public class GUIDisplay {
     private Button nextButton;
     private Button previousButton;
     private Shape legendBox;
+    private SortedGlyphList list;
 
     /**
      * Sets up window for Project 5
@@ -28,7 +29,7 @@ public class GUIDisplay {
         window.setTitle("Project 5 iladjerid kayley25 msjon94");
         setTopButtons();
         setBottomButtons();
-
+        list = new SortedGlyphList();
     }
 
 
