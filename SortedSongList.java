@@ -1,10 +1,17 @@
+
+/**
+* @author
+* class used to keep order and data of the sortedSongList
+*/
 public class SortedSongList {
     private LList<Song> songListName;
     private LList<Song> songListArtist;
     private LList<Song> songListGenre;
     private LList<Song> songListYear;
 
-
+    /**
+    * constructor for the sorted song linst class
+    */
     public SortedSongList() {
         songListName = new LList<Song>();
         songListArtist = new LList<Song>();
@@ -12,7 +19,10 @@ public class SortedSongList {
         songListYear = new LList<Song>();
     }
 
-
+    /**
+    * method to add a song name to the list
+    * @param Song original song object
+    */
     public void addName(Song newEntry) {
         boolean added = false;
         if (songListName.isEmpty()) {
@@ -33,7 +43,10 @@ public class SortedSongList {
         }
     }
 
-
+    /**
+    * method to add a song artist to the list
+    * @param Song original song object
+    */
     public void addArtist(Song newEntry) {
         boolean added = false;
         if (songListArtist.isEmpty()) {
@@ -54,7 +67,10 @@ public class SortedSongList {
         }
     }
 
-
+    /**
+    * method to add a song genre to the list
+    * @param Song original song object
+    */
     public void addGenre(Song newEntry) {
         boolean added = false;
         if (songListGenre.isEmpty()) {
@@ -76,7 +92,10 @@ public class SortedSongList {
 
     }
 
-
+    /**
+    * method to add a song year to the list
+    * @param Song original song object
+    */
     public void addYear(Song newEntry) {
         boolean added = false;
         if (songListYear.isEmpty()) {
@@ -97,42 +116,67 @@ public class SortedSongList {
         }
     }
 
-
+    /**
+    * method to get the name list
+    * @return LList<Song> list for the song spec
+    */
     public LList<Song> getSongListName() {
         return songListName;
     }
 
-
+    /**
+    * method to get the name list size
+    * @return itn size of list
+    */
     public int getNameSize() {
         return songListName.getLength();
     }
 
-
+    /**
+    * method to get the artist list
+    * @return LList<Song> list for the song spec
+    */
     public LList<Song> getSongListArtist() {
         return songListArtist;
     }
 
-
+    /**
+    * method to get the artist list size
+    * @return itn size of list
+    */
     public int getArtistSize() {
         return songListArtist.getLength();
     }
 
-
+    /**
+    * method to get the genre list
+    * @return LList<Song> list for the song spec
+    */
     public LList<Song> getSongListGenre() {
         return songListGenre;
     }
 
-
+    /**
+    * method to get the genre list size
+    * @return itn size of list
+    */
     public int getGenreSize() {
         return songListGenre.getLength();
     }
 
 
+    /**
+    * method to get the year list
+    * @return LList<Song> list for the song spec
+    */
     public LList<Song> getSongListYear() {
         return songListYear;
     }
 
-
+    /**
+    * method to get the year list size
+    * @return itn size of list
+    */
     public int getYearSize() {
         return songListYear.getLength();
     }
