@@ -1,7 +1,9 @@
 
 package prj5;
 
-/**
+     /**
+     * class used to dictate how the song object runs and stores data
+     * 
      * @author Kayley Bogemann (kayley25)
      * @version 2017.04.17
      */
@@ -94,6 +96,8 @@ package prj5;
 
     /**
     * changes the genre field for the song specified
+    *
+    * @param genre String indicating the genre selected
     */
     public void setGenre(String genre) {
         this.genre = genre;
@@ -111,6 +115,8 @@ package prj5;
 
     /**
     * changes the year field for the song specified
+    *
+    * @param year indicates year selected
     */
     public void setYear(int year) {
         this.year = year;
@@ -128,6 +134,8 @@ package prj5;
 
     /**
     * changes the artist field for the song specified
+    *
+    * @param artist String to indicate artist selected
     */
     public void setArtist(String artist) {
         this.artist = artist;
@@ -145,6 +153,8 @@ package prj5;
 
     /**
     * changes the name field for the song specified
+    *
+    * @param name to indicate name selected
     */
     public void setName(String name) {
         this.name = name;
@@ -178,6 +188,8 @@ package prj5;
      * checks if two objects are equal
      * song objects are equal if they have the same name, artist, year, and
      * genre
+     *
+     * @param object object that beings compared in class method
      * 
      * @return true if equal, otherwise returns false
      */
