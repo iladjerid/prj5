@@ -52,4 +52,13 @@ public class Glyph
         this.song.setGenre(song.getGenre());
         this.song.setYear(song.getYear());
     }
+    
+    /**
+     * Returns the song associated with this glyph
+     * 
+     * @return Song associated with glyph
+     */
+    public Song getSong() {
+        return song;
+    }
 }
