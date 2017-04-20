@@ -184,4 +184,11 @@ public class GUIDisplay {
     public void clickedRegion(Button button) {
 
     }
+    
+     /**
+     * Returns the window.
+     */
+    public Window getWindow() {
+        return window;
+    }
 }
