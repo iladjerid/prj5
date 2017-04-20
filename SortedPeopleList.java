@@ -13,6 +13,11 @@ public class SortedPeopleList {
     private LList<Person> hobbyArt;
 
 
+    /**
+    * constructor class used to create the sorted list
+    *
+    * @param persons sortedpersonslist that gets sorted by individual info
+    */
     public SortedPeopleList(SortedPersonList persons) {
         LList<Person> majors = persons.getMajorList();
         LList<Person> regions = persons.getRegionList();
@@ -75,62 +80,121 @@ public class SortedPeopleList {
         }
     }
 
-
+    /**
+    * method used to get the cs major stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getCSMajor() {
         return majorCS;
     }
 
 
+    /**
+    * method used to get the cmda major stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getCMDAMajor() {
         return majorCMDA;
     }
 
 
+    /**
+    * method used to get the eng major stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getEngMajor() {
         return majorEng;
     }
 
 
+    /**
+    * method used to get the other major stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getOtherMajor() {
         return majorOth;
     }
 
 
+    /**
+    * method used to get the se regionr stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getSERegion() {
         return regionSE;
     }
 
 
+    /**
+    * method used to get the ne region stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getNERegion() {
         return regionNE;
     }
 
 
+    /**
+    * method used to get the us region stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getUSRegion() {
         return regionUS;
     }
 
 
+    /**
+    * method used to get the other region stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getOtherRegion() {
         return regionNot;
     }
 
 
+    /**
+    * method used to get the sports stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getSportHobby() {
         return hobbySports;
     }
 
 
+    /**
+    * method used to get the music stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getMusicHobby() {
         return hobbyMusic;
     }
 
 
+    /**
+    * method used to get the read stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getReadHobby() {
         return hobbyRead;
     }
 
 
+    /**
+    * method used to get the art stats
+    *
+    * @return LList<Person> list of people
+    */
     public LList<Person> getArtHobby() {
         return hobbyArt;
     }
