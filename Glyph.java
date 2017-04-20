@@ -61,4 +61,13 @@ public class Glyph
     public Song getSong() {
         return song;
     }
+    
+    /**
+     * Will get list of people
+     * @return list of people
+     */
+    public LList<Person> getPeople()
+    {
+        return peopleList;
+    }
 }
