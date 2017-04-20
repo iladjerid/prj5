@@ -13,7 +13,12 @@ public class SortedGlyphList {
         glyphList = new LList<Glyph>();
     }
 
-    
+    /**
+    * method used to add a song to the sorted list
+    *
+    * @param songList sorted list you wish to add to
+    * @param command name of song being added
+    */
     public void add(SortedSongList songList, String command) {
         LList<Song> list = new LList<Song>();
         if (command == "name") {
@@ -37,7 +42,11 @@ public class SortedGlyphList {
         }
     }
 
-
+    /**
+    * method used to retrieve the glyph list
+    *
+    * @return LList<Glyph> list of glyphs used to retrieve glyphs
+    */
     public LList<Glyph> getGlyphList() {
         return glyphList;
     }
